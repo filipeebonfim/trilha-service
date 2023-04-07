@@ -1,0 +1,13 @@
+input InputModule {
+  id: ID!
+  title: String!
+  description: String!
+  nextModules: [ID]
+  contentsOrder: [ID]
+  contents: [MapInputContent]
+}
+
+input MapInputModule {
+  key: ID!
+  value: InputModule!
+}

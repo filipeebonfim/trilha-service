@@ -1,0 +1,11 @@
+type Alternative {
+  id: ID!
+  title: String!
+  comment: String
+}
+
+input inputAlternative {
+  id: ID!
+  title: String!
+  comment: String
+}

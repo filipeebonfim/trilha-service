@@ -1,0 +1,7 @@
+type Query {
+#  trilhas(filter: FilterWithUserStatus): [Trilha]
+  trilha(data: FilterTrilha!): Trilha
+#  userTrails(filter: FilterWithUserStatus!): [Trilha]
+#  content: Content
+#  contents: [Content]
+}

@@ -1,0 +1,9 @@
+type Mutation {
+    addContent(data: InputContent): Content!
+
+    createTrilha(data: InputTrilha!): returnInput!
+    finalizeTrilha(data: String): returnInput!
+    userApplyTrilha(data: String): returnInput!
+    userLikedTrilha(data: UserLikedTrilha): returnInput!
+    acceptUserOnTrilha(data: AcceptUserOnTrilha): returnInput!
+}

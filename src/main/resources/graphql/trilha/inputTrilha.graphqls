@@ -1,0 +1,39 @@
+input InputTrilha {
+    title: String!
+    description: String!
+    imageUrl: String
+    modules: [MapInputModule]
+    firstModules: [Int]
+    subjects: [Int]
+}
+
+input InputUpdateTrilha {
+    id: String!
+    title: String!
+    description: String!
+    imageUrl: String
+    modules: [MapInputModule]
+    firstModules: [Int]
+    subjects: [Int]
+}
+
+input FilterWithUserStatus {
+    userId: ID
+    statusId: Int
+}
+
+input UserLikedTrilha {
+    id: String!
+    like: Boolean!
+}
+
+input FilterTrilha {
+    id: String!
+    title: String
+}
+
+input AcceptUserOnTrilha {
+    id: String!
+    userId: ID!
+    statusId: ID!
+}

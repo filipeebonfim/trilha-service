@@ -1,0 +1,20 @@
+type Content {
+  id: ID
+  title: String!
+  description: String!
+  type: String!
+  alternativesOrder: [ID]
+  alternatives: [Alternative]
+  skills: [Int]
+  competences: [Int]
+  readByStudent: Boolean
+  alternativeAnswered: [Int]
+  correctAlternatives: [Int]
+}
+
+type MapContent {
+  key: ID!
+  value: Content
+}
+
+

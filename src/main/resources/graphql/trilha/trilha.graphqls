@@ -1,0 +1,25 @@
+type Trilha {
+  id: String
+  title: String!
+  description: String
+  imageUrl: String
+  skills: [Int]
+  competences: [Int]
+  # modules: [MapModule]
+  subjects: [Int]
+  firstModules: [ID]
+  createdBy: Int
+  statusId: Int
+  studentStatus: Int
+  like: Boolean
+}
+
+type TrilhaOnTeam {
+  id: String!
+  title: String!
+  description: String
+  accepted: Boolean
+}
+
+
+

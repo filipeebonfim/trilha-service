@@ -1,0 +1,18 @@
+input InputContent {
+  id: ID
+  title: String!
+  description: String!
+  type: String!
+  alternativesOrder: [ID]
+  alternatives: [inputAlternative]
+  skills:[ID]
+  competences:[ID]
+  readByStudent: Boolean
+  alternativeAnswered: [Int]
+  correctAlternatives: [Int]
+}
+
+input MapInputContent {
+  key: ID!
+  value: InputContent
+}

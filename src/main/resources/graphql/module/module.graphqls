@@ -1,0 +1,13 @@
+type Module {
+  id: ID!
+  title: String!
+  description: String!
+  nextModules: [ID]
+  contentsOrder: [ID]
+  contents: [MapContent]
+}
+
+type MapModule {
+  key: ID!
+  value: Module!
+}
