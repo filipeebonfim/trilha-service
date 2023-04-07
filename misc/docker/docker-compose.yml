@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+  mongo-express:
+    image: mongo-express
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+      ME_CONFIG_MONGODB_PORT: 27017
+    depends_on:
+      - mongo
+    networks:
+      - mongo-compose-network
+
+  mongo:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - /home/filipe/mongodb:/data/db
+    networks:
+      - mongo-compose-network
+
+  mysqlsrv:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_DATABASE: "snorlax"
+    ports:
+      - "3306:3306"
+    volumes:
+      - /home/filipe/docker/volumes/mySql:/var/lib/mysql
+    networks:
+      - mysql-compose-network
+
+  adminer:
+    image: adminer
+    ports:
+      - 9090:8080
+    networks:
+      - mysql-compose-network
+
+networks:
+  mongo-compose-network:
+    driver: bridge
+  mysql-compose-network:
+    driver: bridge
