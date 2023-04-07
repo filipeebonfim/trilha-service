@@ -23,7 +23,7 @@ public interface TrilhaEntityMapper {
 
 
     @Named("InputModuleToMapModule")
-    default Map<Integer, Module> MapInputModuleToModule(final List<MapInputModule> mapInputModules) {
+    default Map<Integer, Module> mapInputModuleToModule(final List<MapInputModule> mapInputModules) {
         return mapInputModules.stream()
                 .map(mapInputModule -> toCoreModule(mapInputModule.getValue()))
                 .collect(Collectors.toMap(Module::getId, module -> module));

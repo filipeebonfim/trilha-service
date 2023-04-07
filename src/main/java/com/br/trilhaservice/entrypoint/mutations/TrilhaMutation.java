@@ -41,12 +41,12 @@ public class TrilhaMutation {
     }
 
     @MutationMapping
-    public ReturnInput userLikedTrilha(final UserLikedTrilha UserLikedTrilha) {
+    public ReturnInput userLikedTrilha(final UserLikedTrilha userLikedTrilha) {
         throw new NotYetImplementedException();
     }
 
     @MutationMapping
-    public ReturnInput acceptUserOnTrilha(final AcceptUserOnTrilha AcceptUserOnTrilha) {
+    public ReturnInput acceptUserOnTrilha(final AcceptUserOnTrilha acceptUserOnTrilha) {
         throw new NotYetImplementedException();
     }
 
